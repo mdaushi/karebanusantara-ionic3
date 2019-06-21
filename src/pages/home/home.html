@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    </ion-buttons>
+
+    <ion-title>Karebanusantara</ion-title>
+
+    <ion-buttons end>
+        <button ion-button icon-only (click)="openSeacrhPage()">
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h5 ion-text class="titleHeadline">Berita Terbaru</h5>
+  <div class="card-background-page">
+      <ion-slides *ngIf="news && news.length" initialSlide="1" pager loop="true"autoplay="2000" speed="3000" >
+          <ion-slide *ngFor="let item of news" (click)="openDetail(item)">
+              <ion-card>
+                  <!--{{item._embedded['wp:featuredmedia'][0].media_details.sizes.td_356x220.source_url}}-->
+                  
+                  <img src="{{item._embedded['wp:featuredmedia'][0].media_details.sizes.td_356x220.source_url}}"/>
+                  <div class="card-title" text-left>{{item.title.rendered}}</div>
+                  <ion-row>
+                    <ion-badge text-left class="subtitle">
+                        <ion-icon name="time"></ion-icon>
+                        {{item.date | date: "dd MMMM yyyy"}}
+                    </ion-badge>
+                  </ion-row>
+                </ion-card>
+          </ion-slide>
+        </ion-slides>
+  </div>
+   
+ <!-- <ion-row>-->
+    <ion-item padding class="bgDark">
+    <ion-label>Urut Berdasarkan :</ion-label>
+    <ion-select [(ngModel)]="sort" (ionChange)="changeSort()" okText="Ok" cancelText="Batal" interface="action-sheet">
+      <ion-option value="0">Post Baru</ion-option>
+      <ion-option value="1">Post Lama</ion-option>
+      <ion-option value="2">A to Z</ion-option>
+   </ion-select>
+  </ion-item>
+ <!-- </ion-row>-->
+  <ion-refresher (ionRefresh)="getPosts($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card class="themeCard" *ngFor="let item of items" (click)="openDetail(item)">
+    <div ion-item style="padding:6px;" >
+          <ion-thumbnail item-start style="margin-top: 0; margin-bottom: 0; margin-right: 15px;">
+            <img src="assets/imgs/defaultimgpng.png" [lazyLoad]="item._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url">
+            <!--<img src="{{item._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url}}">-->
+          </ion-thumbnail>
+          <p text-wrap class="themeP" >{{item.title.rendered}}</p>
+          <ion-badge style="margin-top: 10px;">
+            <ion-icon name="time"></ion-icon>
+            {{item.date | date : "dd MM yyyy"}}
+          </ion-badge>
+          <ion-icon style="margin-top: 10px;" float-right name="bookmark"></ion-icon>
+    </div>
+  </ion-card>
+
+  <!--<ion-card *ngFor="let item of items" (click)="openDetail(item)">
+    <img src="{{item._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url}}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{item.title.rendered}}
+        </ion-card-title>
+        <ion-row>
+          <ion-badge>
+            {{api.getCatName(item.categories[0])}}
+          </ion-badge>
+          <ion-badge color="light">
+            <ion-icon name="time"></ion-icon>
+            {{item.date | date: "dd.MM.yyyy"}}
+          </ion-badge>
+        </ion-row>
+    </ion-card-content>
+  </ion-card> -->
+  <div *ngIf="isLoading && page==1" text-center padding>
+    <ion-spinner></ion-spinner>
+  </div>
+  <ion-infinite-scroll (ionInfinite)="getPosts($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
+</ion-content>

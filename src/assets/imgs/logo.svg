@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 350.69 396.48">
+<defs>
+<style>.cls-1,.cls-2,.cls-3{fill-rule:evenodd;}.cls-1{fill:url(#GradientFill_1);}.cls-2{fill:url(#GradientFill_2);}.cls-3{fill:#ffcb00;}</style>
+<linearGradient id="GradientFill_1" x1="249.45" y1="64" x2="81.34" y2="222.95" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#009649"/><stop offset="0.5" stop-color="#002020"/>
+<stop offset="1" stop-color="#009649"/>
+</linearGradient>
+<linearGradient id="GradientFill_2" x1="99.73" y1="329.27" x2="273.77" y2="175.1" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#009649"/>
+<stop offset="0.41" stop-color="#002020"/><stop offset="1" stop-color="#009649"/>
+</linearGradient>
+</defs>
+<title>Asset 1</title>
+<g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
+<path class="cls-1" d="M25.33,179.36c-40.81-35.9-25.88-50.21-.2-73.43l87.68-79.32C158.84-15,234.64-5.21,283.87,38.09c50.24,44.19,59.65,109.2,13.55,150.9l-2.1,1.9-41.26-36.3.11-.1c15.89-14.37,5.58-56.3-16.92-76.08S170.8,47.78,152.78,64.08Z"/>
+<path class="cls-2" d="M325.35,217.12c40.81,35.9,25.88,50.21.21,73.43l-87.69,79.32c-46,41.64-121.83,31.82-171-11.48-50.25-44.2-59.65-109.21-13.55-150.9l2.09-1.9,41.27,36.3-.12.1c-15.88,14.37-5.57,56.29,16.92,76.08s66.45,30.63,84.48,14.33Z"/>
+<polygon class="cls-3" points="102.72 236.38 217.06 132.95 175.8 96.65 61.45 200.08 102.72 236.38"/>
+<polygon class="cls-3" points="247.97 160.1 133.72 263.44 174.99 299.74 289.23 196.4 247.97 160.1"/>
+</g></g>
+</svg>

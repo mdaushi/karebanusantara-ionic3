@@ -1,0 +1,39 @@
+page-home {
+    .card-background-page {
+
+        ion-card {
+            margin-bottom: 30px;
+          position: relative;
+          text-align: center;
+        }
+      
+        .card-title {
+          position: absolute;
+          top: 50%;
+          //font-size: 2.0em;
+          left: 5px;
+          font-weight: bold;
+         color: rgb(243, 243, 243);
+        }
+        .subtitle{
+            position: absolute;
+            //color: #fff;
+            top: 80%;
+            left: 5%;
+        }
+      
+      }
+      .item ion-thumbnail{
+        
+        img{
+          border-radius: 5px;
+          min-width: 110px;
+          min-height: 110px;
+          
+        }
+      }
+      .titleHeadline{
+        margin-left: 10px;
+      }
+      
+}

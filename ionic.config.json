@@ -1,0 +1,7 @@
+{
+  "name": "karebanu",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

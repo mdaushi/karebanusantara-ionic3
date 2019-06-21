@@ -1,0 +1,35 @@
+<ion-menu [content]="content">
+  <ion-content class="bg-color">
+    <div class="profile">
+      <div class="profile-image">
+        <img src="../assets/imgs/logo.svg" alt="">
+        <p ion-text>Karebanusantara</p>
+      </div> 
+    </div>
+    <ion-list no-lines>
+      <ion-item menuClose (click)="openPage(0)">
+        <ion-icon name="home" item-start></ion-icon>
+        Home
+      </ion-item>
+      <ion-item menuClose (click)="openKategori()">
+      <ion-icon name="list-box" item-start></ion-icon>
+        Kategori
+      </ion-item>
+      <ion-item menuClose (click)="openAbout()">
+      <ion-icon name="flag" item-start></ion-icon>
+        About
+      </ion-item>
+      <ion-item menuClose (click)="openPengaturan()">
+      <ion-icon name="settings" item-start></ion-icon>
+        Pengaturan
+      </ion-item>
+    <!-- <button menuClose ion-item *ngFor="let cat of api.Categories" (click)="openPage(cat.id)">
+        {{cat.name}}
+      </button> -->
+    </ion-list> 
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" [class]="selectedTheme" #content swipeBackEnabled="false"></ion-nav>

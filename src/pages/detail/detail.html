@@ -1,0 +1,48 @@
+<!--
+  Generated template for the DetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{post.title.rendered}}</ion-title>
+    <ion-buttons end>
+      <a ion-button icon-only target="_blank" href="{{post.link}}">
+        <ion-icon name="eye"></ion-icon>
+      </a>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header> 
+
+<ion-content>
+    <img src="assets/imgs/defaultimgpng.png"   [lazyLoad]="post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url" >
+    <!--<img src="{{post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url}}">-->
+  
+ 
+  <ion-card class="bgDark">
+      <div padding>
+        <ion-row>
+          <ion-badge color="second">
+            {{api.getCatName(post.categories[0])}}
+          </ion-badge>
+        </ion-row>
+          <ion-card-title>{{post.title.rendered}}</ion-card-title>
+          <ion-row>
+              
+              <ion-badge color="light">
+                <ion-icon name="time"></ion-icon>
+                {{post.date | date: "dd MMMM yyyy"}}
+              </ion-badge>
+              <ion-badge color="light">
+                  <ion-icon name="person"></ion-icon>
+                  {{post._embedded.author[0].name}}
+                </ion-badge>
+            </ion-row>
+        </div>
+    <div padding text-justify [innerHTML]='post.content.rendered'></div>
+  
+  </ion-card>
+  
+  
+</ion-content>

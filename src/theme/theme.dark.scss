@@ -1,0 +1,38 @@
+.dark-theme {
+    ion-content {
+      background-color: #282C39;
+      color: #fff;
+      
+    }
+    .bgDark{
+      background-color: #282C39;
+    }
+    
+    .toolbar-title {
+      color: #fff;
+    }
+   
+    .header .toolbar-background {
+     // border-color: #ff0fff;
+      background-color: #1B1E28;
+    }
+    .card {
+      background: #282C39;
+      .card-title, .card-header{
+        color : #fff;
+      }
+      h2, p{
+        color: #fff;
+      }
+      .item{
+      background-color: #1B1E28;
+      color : #fff;
+      }
+      
+    }
+      .themeCard{
+      background-color: #1B1E28;
+      color : #fff;
+    }
+   
+  }  

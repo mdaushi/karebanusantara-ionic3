@@ -1,0 +1,33 @@
+ion-menu{
+.bg-color{
+    background-color: #1B1E28;
+    color: #fff;
+}
+.list{
+    .item{
+        color: #fff;
+        background-color: #1B1E28;
+    }
+}
+    
+.profile{
+    position: relative;
+    height: 250px;
+}
+.profile-image{
+    text-align: center;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.profile-image img {
+   // width: 100px;
+    width: 70%;
+   // border-radius: 50%;
+    //object-fit: cover;
+}
+.profile-image p{
+    font-size: 18px;
+}
+}
